@@ -53,7 +53,7 @@ jobs:
       - name: Docker run plugin tests
         run: |
           docker exec qgis-testing-environment sh -c  "ls -l /tests_directory"
-          docker exec qgis-testing-environment sh -c  "cd tests_directory;python3 -m unittest reduce_bend_unittest.py"
+          docker exec qgis-testing-environment sh -c  "cd python3 -m unittest /tests_directory/reduce_bend_unittest.py"
 #          docker exec qgis-testing-environment sh -c  "cd tests_directory;python3 -m unittest chordal_axis_unittest.py"
 #          docker exec qgis-testing-environment sh -c "qgis_testrunner.sh $TESTS_RUN_FUNCTION"
   Check-code-quality:
