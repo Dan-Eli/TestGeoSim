@@ -29,8 +29,8 @@ jobs:
 
     strategy:
       matrix:
-        docker_tags: [release-3_16, release-3_18, latest]
-        # docker_tags: [release-3_16]
+        # docker_tags: [release-3_16, release-3_18, latest]
+        docker_tags: [release-3_16]
 
     steps:
 
@@ -54,6 +54,7 @@ jobs:
         run: |
           docker exec qgis-testing-environment sh -c  "pwd"
           docker exec qgis-testing-environment sh -c  "ls -l /tests_directory"
+          docker exec qgis-testing-environment sh -c  "ls -l"
           docker exec qgis-testing-environment sh -c  "python3 -m unittest /tests_directory/chordal_axis_unittest.py"
 #          docker exec qgis-testing-environment sh -c "qgis_testrunner.sh $TESTS_RUN_FUNCTION"
 #          docker exec qgis-testing-environment sh -c  "python3 -m unittest /tests_directory/reduce_bend_unittest.py"
