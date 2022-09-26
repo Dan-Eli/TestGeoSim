@@ -20,7 +20,7 @@
 
 
 import unittest
-from chordal_axis_algorithm import ChordalAxis, GenUtil
+from .chordal_axis_algorithm import ChordalAxis, GenUtil
 from qgis.core import QgsPoint, QgsLineString, QgsPolygon, QgsFeature, QgsGeometry, QgsProcessingFeedback, \
                       QgsVectorLayer
 from qgis.analysis import QgsNativeAlgorithms
