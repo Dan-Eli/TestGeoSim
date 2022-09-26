@@ -58,8 +58,8 @@ jobs:
           docker exec qgis-testing-environment sh -c  "cp -a /test_qgis/. /"
           docker exec qgis-testing-environment sh -c  "ls -l"
           docker exec qgis-testing-environment sh -c  "python3 -m unittest /chordal_axis_unittest.py"
+          docker exec qgis-testing-environment sh -c  "python3 -m unittest /reduce_bend_unittest.py"
 #          docker exec qgis-testing-environment sh -c "qgis_testrunner.sh $TESTS_RUN_FUNCTION"
-#          docker exec qgis-testing-environment sh -c  "python3 -m unittest /tests_directory/reduce_bend_unittest.py"
   Check-code-quality:
     runs-on: ubuntu-latest
     steps:
